@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сабирли: Історія Терплячого</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap">
+    <style>
+        /* Base styles */
+        :root {
+            --text-color: #333;
+            --background-color: #f9f7f5;
+            --accent-color: #4a4a4a;
+            --border-color: #e0dbd5;
+            --header-font: 'Playfair Display', Georgia, serif;
+            --body-font: 'EB Garamond', 'Merriweather', Georgia, serif;
+            --caption-font: 'Playfair Display', Georgia, serif;
+            --highlight-color: #b3a59a;
+            --shadow-color: rgba(0, 0, 0, 0.08);
+            --vintage-color: #f4efe9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--body-font);
+            color: var(--text-color);
+            background-color: var(--background-color);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+            position: relative;
+            background-image: 
+                url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23a49e93' fill-opacity='0.03'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+                linear-gradient(to bottom, var(--background-color), var(--vintage-color));
+            background-attachment: fixed;
+        }
+
+        /* Layout structure */
+        .page-structure {
+            display: grid;
+            grid-template-columns: minmax(0, 15%) minmax(0, 70%) minmax(0, 15%);
+            max-width: 1800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* Header styles */
+        header {
+            padding: 3rem 0 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 10px var(--shadow-color);
+            position: relative;
+            grid-column: 1 / -1;
+            z-index: 100;
+            backdrop-filter: blur(5px);
+            animation: fadeInDown 1.2s ease-out forwards;
+        }
+
+        .site-title {
+            font-family: var(--header-font);
+            font-size: 4.5rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+            color: #222;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.03);
+            animation: titleReveal 1.5s ease-out forwards;
+        }
+
+        @keyframes titleReveal {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .site-subtitle {
+            font-family: var(--caption-font);
+            font-style: italic;
+            font-weight: 400;
+            font-size: 1.5rem;
+            color: #666;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+            animation: subtitleFade 2s ease-out forwards;
+        }
+
+        @keyframes subtitleFade {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .divider {
+            width: 120px;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+            margin: 1.5rem auto;
+            opacity: 0.7;
+        }
+
+        .ornament {
+            width: 50px;
+            height: 20px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 20'%3E%3Cpath d='M25 0C20 0 15 5 15 10C15 15 20 20 25 20C30 20 35 15 35 10C35 5 30 0 25 0ZM25 16C22.2 16 19 13.8 19 10C19 6.2 22.2 4 25 4C27.8 4 31 6.2 31 10C31 13.8 27.8 16 25 16Z' fill='%23555'/%3E%3Cpath d='M10 8C5 8 0 9.5 0 10C0 10.5 5 12 10 12' stroke='%23555' fill='none' stroke-width='1'/%3E%3Cpath d='M40 8C45 8 50 9.5 50 10C50 10.5 45 12 40 12' stroke='%23555' fill='none' stroke-width='1'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0 auto;
+            opacity: 0.6;
+        }
+
+        /* Navigation */
+        nav {
+            margin: 1.5rem 0 0.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav li {
+            margin: 0 1.5rem;
+            position: relative;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            font-family: var(--caption-font);
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            display: inline-block;
+            padding: 0.25rem 0;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--accent-color);
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #000;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        /* Main content */
+        .content-column {
+            grid-column: 2 / 3;
+            background-color: #fff;
+            box-shadow: 0 0 40px var(--shadow-color);
+            padding: 3rem;
+            position: relative;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+            border: 1px solid var(--border-color);
+            z-index: 10;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Sidebar Galleries */
+        .gallery-column-left {
+            grid-column: 1 / 2;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 0;
+            z-index: 5;
+            perspective: 1000px;
+        }
+
+        .gallery-column-right {
+            grid-column: 3 / 4;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 0;
+            z-index: 5;
+            perspective: 1000px;
+        }
+
+        .gallery-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 1rem 0;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item {
+            margin: 1rem 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 15px var(--shadow-color);
+            border-radius: 2px;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+            opacity: 0;
+            animation: galleryItemFade 1.5s forwards;
+            animation-delay: calc(var(--order) * 0.2s);
+        }
+
+        @keyframes galleryItemFade {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            z-index: 10;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: all 0.5s ease;
+            filter: sepia(0.2) contrast(1.05) brightness(0.95);
+        }
+
+        .gallery-item:hover .gallery-img {
+            filter: sepia(0) contrast(1.1) brightness(1);
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: #fff;
+            padding: 1.5rem 1rem 0.8rem;
+            font-size: 0.85rem;
+            font-family: var(--caption-font);
+            font-style: italic;
+            transform: translateY(100%);
+            transition: transform 0.35s ease-out;
+            text-align: center;
+            opacity: 0;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Chapter styles */
+        .chapter {
+            position: relative;
+            margin-bottom: 3rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+
+        .chapter.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .chapter-marker {
+            width: 70px;
+            height: 2px;
+            background-color: var(--accent-color);
+            margin: 2rem auto;
+            opacity: 0.6;
+            position: relative;
+        }
+
+        .chapter-marker::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            position: absolute;
+            top: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .chapter-content {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            text-align: justify;
+            color: #222;
+            font-family: var(--body-font);
+            font-weight: 400;
+            letter-spacing: 0.2px;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .chapter-content p {
+            margin-bottom: 1.5rem;
+            position: relative;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: paragraphReveal 1s forwards;
+            animation-delay: calc(var(--delay) * 0.15s);
+        }
+
+        @keyframes paragraphReveal {
+            from { 
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .chapter-content p:first-of-type::first-letter {
+            font-size: 4rem;
+            font-weight: bold;
+            float: left;
+            line-height: 0.65;
+            margin: 0.1em 0.1em 0.05em 0;
+            padding: 0.1em;
+            color: #333;
+            font-family: var(--header-font);
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.05);
+        }
+
+        /* Audio section */
+        .audio-section {
+            margin: 4rem 0;
+            padding: 2rem;
+            background-color: var(--vintage-color);
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            position: relative;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+
+        .audio-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .audio-section::before,
+        .audio-section::after {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--border-color);
+            pointer-events: none;
+        }
+
+        .audio-section::before {
+            top: -5px;
+            left: -5px;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .audio-section::after {
+            bottom: -5px;
+            right: -5px;
+            border-left: none;
+            border-top: none;
+        }
+
+        .page-title {
+            text-align: center;
+            font-family: var(--header-font);
+            font-size: 2.5rem;
+            margin: 0 0 2rem;
+            color: #222;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .page-title::after {
+            content: "";
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Audio player styling */
+        .audio-player {
+            margin-top: 2rem;
+            position: relative;
+        }
+
+        .audio-progress {
+            width: 100%;
+            height: 5px;
+            background-color: #e0e0e0;
+            border-radius: 3px;
+            position: relative;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .audio-progress-filled {
+            width: 0%;
+            height: 100%;
+            background-color: var(--accent-color);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: width 0.1s linear;
+        }
+
+        .audio-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .audio-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #333;
+            font-size: 1.5rem;
+            transition: all 0.2s ease;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .audio-button:hover {
+            background-color: #fff;
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .audio-button:active {
+            transform: scale(0.98);
+        }
+
+        .audio-time {
+            font-family: var(--body-font);
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .audio-info {
+            margin-top: 1.5rem;
+            text-align: center;
+            font-style: italic;
+            color: #777;
+        }
+
+        /* Music player */
+        .music-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .music-player:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .music-player.playing {
+            background-color: rgba(179, 165, 154, 0.2);
+        }
+
+        .music-icon {
+            width: 24px;
+            height: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .music-player:hover .music-icon {
+            transform: rotate(10deg);
+        }
+
+        /* Mood overlays */
+        .vignette {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: radial-gradient(ellipse at center, rgba(0,0,0,0) 65%, rgba(0,0,0,0.3) 100%);
+            z-index: 1000;
+            mix-blend-mode: multiply;
+            opacity: 0.7;
+        }
+
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.06;
+            z-index: 1001;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: #666;
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 10;
+            margin-top: 4rem;
+            grid-column: 1 / -1;
+            background-color: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
+        }
+
+        .footer-ornament {
+            width: 80px;
+            height: 20px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 20'%3E%3Cpath d='M40 0C35 0 30 5 30 10C30 15 35 20 40 20C45 20 50 15 50 10C50 5 45 0 40 0ZM40 16C37.2 16 34 13.8 34 10C34 6.2 37.2 4 40 4C42.8 4 46 6.2 46 10C46 13.8 42.8 16 40 16Z' fill='%23777'/%3E%3Cpath d='M15 8C5 8 0 9.5 0 10C0 10.5 5 12 15 12' stroke='%23777' fill='none' stroke-width='0.8'/%3E%3Cpath d='M65 8C75 8 80 9.5 80 10C80 10.5 75 12 65 12' stroke='%23777' fill='none' stroke-width='0.8'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 1rem auto;
+            opacity: 0.5;
+        }
+
+        .footer-text {
+            font-family: var(--caption-font);
+            letter-spacing: 1px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 1200px) {
+            .page-structure {
+                grid-template-columns: 1fr 3fr 1fr;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .site-title {
+                font-size: 3.5rem;
+            }
+
+            .page-structure {
+                grid-template-columns: 100%;
+            }
+
+            .content-column {
+                grid-column: 1;
+                margin: 2rem 1rem;
+            }
+
+            .gallery-column-left,
+            .gallery-column-right {
+                display: none;
+            }
+
+            .gallery-mobile {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 1rem;
+                margin: 2rem 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .site-title {
+                font-size: 2.5rem;
+            }
+
+            .site-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .chapter-content {
+                font-size: 1.1rem;
+            }
+
+            .chapter-content p:first-of-type::first-letter {
+                font-size: 3rem;
+            }
+
+            .content-column {
+                padding: 1.5rem;
+            }
+
+            .gallery-mobile {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hidden Elements for Larger Screens */
+        .gallery-mobile {
+            display: none;
+        }
+
+        /* Additional decorative elements */
+        .decorative-initial {
+            display: inline-block;
+            position: relative;
+        }
+
+        .decorative-initial::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent-color);
+            opacity: 0.3;
+        }
+
+        .pull-quote {
+            font-family: var(--header-font);
+            font-size: 1.8rem;
+            line-height: 1.4;
+            font-style: italic;
+            color: #555;
+            text-align: center;
+            margin: 3rem 2rem;
+            padding: 1rem 0;
+            position: relative;
+        }
+
+        .pull-quote::before,
+        .pull-quote::after {
+            content: """;
+            font-family: var(--header-font);
+            font-size: 4rem;
+            color: var(--accent-color);
+            opacity: 0.3;
+            position: absolute;
+        }
+
+        .pull-quote::before {
+            top: -1rem;
+            left: -1rem;
+        }
+
+        .pull-quote::after {
+            content: """;
+            bottom: -2.5rem;
+            right: -1rem;
+        }
+
+        /* Scroll animations */
+        .parallax-scroll {
+            transition: transform 0.3s ease-out;
+        }
+
+        /* Loading animation */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f9f7f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-content {
+            text-align: center;
+        }
+
+        .loader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid #eee;
+            border-top: 3px solid var(--accent-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p>Завантаження історії...</p>
+        </div>
+    </div>
+
+    <!-- Mood overlays -->
+    <div class="vignette"></div>
+    <div class="grain-overlay"></div>
+
+    <!-- Header -->
+    <header>
+        <h1 class="site-title">Сабирли</h1>
+        <div class="divider"></div>
+        <h2 class="site-subtitle">Історія Терплячого</h2>
+        <div class="ornament"></div>
+        <nav>
+            <ul>
+                <li><a href="#story">Історія</a></li>
+                <li><a href="#audio">Аудіо</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-structure">
+        <!-- Left Gallery Column -->
+        <div class="gallery-column-left">
+            <div class="gallery-container">
+                <div class="gallery-item" style="--order: 1">
+                    <img src="image1.jpg" alt="Пес Сабирли" class="gallery-img">
+                    <div class="gallery-caption">Сабирли – пес з кров'ю вовка, вірний супутник пастуха</div>
+                </div>
+                <div class="gallery-item" style="--order: 2">
+                    <img src="image2.jpg" alt="Нічна сутичка" class="gallery-img">
+                    <div class="gallery-caption">Крижана ніч: сутичка, що змінила все</div>
+                </div>
+                <div class="gallery-item" style="--order: 3">
+                    <img src="image3.jpg" alt="Пакізе з Айдером" class="gallery-img">
+                    <div class="gallery-caption">Пакізе пригортає малого Айдера в часи горя</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Column -->
+        <div class="content-column">
+            <section id="story" class="story-section">
+                <div class="chapter" data-scroll>
+                    <div class="chapter-content">
+                        <p style="--delay: 1">Моє ім'я – Сабирли. Терплячий. Так мене нарекли, і це ім'я стало моєю суттю. В моїх жилах тече кров вірної матері-вівчарки і дика сила батька-вовка, чия шкура довго лежала біля ліжка пастуха Сулеймана, мого першого господаря. Я з'явився на світ за незвичайних обставин: Дагджи дозволив вовку наблизитись до моєї матері у лісі, а потім пролунав гучний звук, після якого вовка не стало. Може, тому все моє життя – це чекання і переживання.</p>
+                    </div>
+
+                    <div class="chapter-marker"></div>
+
+                    <div class="chapter-content">
+                        <p style="--delay: 2">Я ріс біля Сулеймана, вчився охороняти овець, бути вірним. Але спокій тривав недовго. Однієї крижаної ночі, коли мені було п'ять зим, сталася сутичка з диким звіром. Сулейман вибіг на допомогу... і більше не підвівся. Нападники завдали йому тяжких ран. Я теж постраждав – на моєму тілі залишились мітки від тієї ночі. Лише рішучі дії його дружини Пакізе поклали край нападу і врятували мене. Біля господаря, що вже не дихав, я вперше відчув крижаний холод самотності, що оселився в мені назавжди.</p>
+                    </div>
+
+                    <div class="pull-quote">
+                        Біля господаря, що вже не дихав, я вперше відчув крижаний холод самотності, що оселився в мені назавжди.
+                    </div>
+
+                    <div class="chapter-content">
+                        <p style="--delay: 3">Пакізе сумувала, пригортаючи малого Айдера. Мене віддали іншому пастуху, чоловіку з непростим характером. Він поводився зі мною суворо, застосовував силу. Я стерпів раз. Коли він замахнувся вдруге, я просто мовчки подивився на нього. Він відступив. Я повернувся до Айдера, до єдиного тепла, що лишилося – його дитячих рук на моїй шиї.</p>
+                    </div>
+
+                    <div class="chapter-marker"></div>
+
+                    <div class="chapter-content">
+                        <p style="--delay: 4">Роки минали. Айдер ріс, став пастухом замість батька. Знову була отара, яку я заганяв удень і стеріг уночі. Життя ніби увійшло у звичне русло. Але потім не стало Пакізе. Тієї ночі мій сум виливався у довге, тужливе виття до місяця. Старість підкрадалася непомітно: кістки нили, тіло важчало. Лише моя необачна цікавість, що змалку штовхала мене то до жарин (обпік ніс), то до корови з телям (підкинула рогами), не полишала мене.</p>
+                    </div>
+
+                    <div class="chapter-marker"></div>
+
+                    <div class="chapter-content">
+                        <p style="--delay: 5">А потім настали складні часи. Світ змінився. Прийшов голод, темрява огорнула хати. Айдер пішов кудись далеко, звідки віяло тривогою і прощанням. Його запах зник з двору. Потім забрали овець, корів, коней. Я залишився без звичної роботи, без мети. З'явилися люди у військовій формі – чужі, з різким запахом металу. Я зрозумів: навколо стало небезпечно.</p>
+
+                        <p style="--delay: 6">Село порожніло. В одній з хат оселився старий Дагджи, що повернувся зі своїх мандрів. Але й він незабаром зник. Я все більше відчував себе самотнім. Одного дня я відчув раптовий гострий біль у задній лапі – мене щось вразило. Я тікав, кульгаючи, подалі від села, ховався в лісі, їв дикі плоди, шукав трави, щоб вижити. Голод мучив, але самотність гризла сильніше.</p>
+
+                        <p style="--delay: 7">Якось, знову через свою цікавість, я натрапив на блискучу круглу річ на галявині. Торкнувся лапою... Пролунав гучний тріск і стався спалах! Мене оглушило. Дивом я залишився цілий серед тих небезпечних предметів, що їх залишили по собі чужинці.</p>
+                    </div>
+
+                    <div class="chapter-marker"></div>
+
+                    <div class="chapter-content">
+                        <p style="--delay: 8">Якось я побачив незвичне пожвавлення. Люди зі зброєю оточили село. Жінки, діти, старі з вузлами йшли до школи. Плач, розгублені голоси, страх. Потім приїхали великі машини, людей зібрали і вивезли. Усіх. Село стало тихим. Порожнім. Я не міг збагнути – як це? Куди вони поїхали? Чому покинули все? Я не знав про той масовий від'їзд, про те, що так спорожніли всі села аж до моря.</p>
+                    </div>
+
+                    <div class="pull-quote">
+                        Село стало тихим. Порожнім.
+                    </div>
+
+                    <div class="chapter-content">
+                        <p style="--delay: 9">Голод знову привів мене назад. Я знайшов якусь їжу. А потім побачив його – високого бороданя на возі, навантаженому чужим майном. Він жорстоко поводився із запряженою шкапиною, доки та не впала без сил. А потім вивів Чатира – коня Айдера, мого господаря! – щоб змусити його тягти віз замість тварини, що загинула. Моє терпіння, вся моя собача душа повстали проти такої жорстокості. Я втрутився, спробував зупинити його. Ми зійшлися в сутичці. Він був сильний, намагався мене здолати. Чатир впізнав мене, штовхнув носом, і це дозволило мені вирватися.</p>
+
+                        <p style="--delay: 10">Знесилений, з болем у горлі, я відлежався в бур'янах. Потім знову потягнувся до села. Відчув запах диму – горіла хата. Біля пожежі стояла людина. На одній нозі, з милицею. Чоловік дивився на вогонь і тихо плакав. Я підійшов ближче. Він побачив мене, покликав. Голос був знайомий, хоч і сповнений болю. Він годував худобу, покинуту в хлівах. І він поділився зі мною хлібом. Теплим, справжнім хлібом! Його добра рука лягла мені на голову. Я заплющив очі, і з-під повік покотилися сльози, як і в нього. Ми разом обійшли двори, розносячи сіно голодним тваринам.</p>
+                    </div>
+                </div>
+
+                <!-- Mobile Gallery (shows only on smaller screens) -->
+                <div class="gallery-mobile">
+                    <div class="gallery-item">
+                        <img src="image1.jpg" alt="Пес Сабирли" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image2.jpg" alt="Нічна сутичка" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image3.jpg" alt="Пакізе з Айдером" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image4.jpg" alt="Айдер-пастух" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image5.jpg" alt="Військові у селі" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image6.jpg" alt="Евакуація села" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image7.jpg" alt="Біля палаючої хати" class="gallery-img">
+                    </div>
+                </div>
+            </section>
+
+            <section id="audio" class="audio-section" data-scroll>
+                <h2 class="page-title">Прослухати історію</h2>
+
+                <div class="audio-player">
+                    <div class="audio-progress">
+                        <div class="audio-progress-filled"></div>
+                    </div>
+
+                    <div class="audio-controls">
+                        <button class="audio-button" id="playBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </button>
+
+                        <div class="audio-time">
+                            <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+                        </div>
+
+                        <button class="audio-button" id="rewindBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="11 19 2 12 11 5 11 19"></polygon>
+                                <polygon points="22 19 13 12 22 5 22 19"></polygon>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="audio-info">
+                    Професійна озвучка історії Сабирли
+                </div>
+            </section>
+        </div>
+
+        <!-- Right Gallery Column -->
+        <div class="gallery-column-right">
+            <div class="gallery-container">
+                <div class="gallery-item" style="--order: 3">
+                    <img src="image4.jpg" alt="Айдер-пастух" class="gallery-img">
+                    <div class="gallery-caption">Айдер стає пастухом, життя повертається у звичне русло</div>
+                </div>
+                <div class="gallery-item" style="--order: 4">
+                    <img src="image5.jpg" alt="Військові у селі" class="gallery-img">
+                    <div class="gallery-caption">Складні часи настають: чужинці з запахом металу</div>
+                </div>
+                <div class="gallery-item" style="--order: 5">
+                    <img src="image6.jpg" alt="Евакуація села" class="gallery-img">
+                    <div class="gallery-caption">Порожнє село: люди збираються до школи перед від'їздом</div>
+                </div>
+                <div class="gallery-item" style="--order: 6">
+                    <img src="image7.jpg" alt="Біля палаючої хати" class="gallery-img">
+                    <div class="gallery-caption">Зустріч біля палаючої хати: момент людяності серед руїн</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-ornament"></div>
+        <p class="footer-text">© 2025 Історія Сабирли | Всі права захищені</p>
+    </footer>
+
+    <!-- Background music player -->
+    <div class="music-player" id="musicToggle">
+        <svg class="music-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18V5l12-2v13"></path>
+            <circle cx="6" cy="18" r="3"></circle>
+            <circle cx="18" cy="16" r="3"></circle>
+        </svg>
+    </div>
+
+    <!-- Hidden audio elements -->
+    <audio id="backgroundMusic" loop>
+        <source src="background_music.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="storyAudio" preload="metadata">
+        <source src="sabyrli_story.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Loader animation
+            setTimeout(function() {
+                document.getElementById('loader').classList.add('hidden');
+            }, 1500);
+
+            // Background music functionality
+            const musicToggle = document.getElementById('musicToggle');
+            const backgroundMusic = document.getElementById('backgroundMusic');
+
+            // Set initial volume to low
+            backgroundMusic.volume = 0.15;
+
+            let isPlaying = false;
+
+            musicToggle.addEventListener('click', function() {
+                if (isPlaying) {
+                    backgroundMusic.pause();
+                    musicToggle.classList.remove('playing');
+                } else {
+                    backgroundMusic.play();
+                    musicToggle.classList.add('playing');
+                }
+
+                isPlaying = !isPlaying;
+            });
+
+            // Audio player functionality
+            const audio = document.getElementById('storyAudio');
+            const playBtn = document.getElementById('playBtn');
+            const rewindBtn = document.getElementById('rewindBtn');
+            const progress = document.querySelector('.audio-progress');
+            const progressFilled = document.querySelector('.audio-progress-filled');
+            const currentTimeEl = document.getElementById('currentTime');
+            const durationEl = document.getElementById('duration');
+
+            function togglePlay() {
+                if (audio.paused) {
+                    audio.play();
+                    playBtn.innerHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="6" y="4" width="4" height="16"></rect>
+                            <rect x="14" y="4" width="4" height="16"></rect>
+                        </svg>
+                    `;
+                } else {
+                    audio.pause();
+                    playBtn.innerHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                    `;
+                }
+            }
+
+            function updateProgress() {
+                const percent = (audio.currentTime / audio.duration) * 100;
+                progressFilled.style.width = `${percent}%`;
+
+                // Update time display
+                currentTimeEl.textContent = formatTime(audio.currentTime);
+            }
+
+            function scrub(e) {
+                const scrubTime = (e.offsetX / progress.offsetWidth) * audio.duration;
+                audio.currentTime = scrubTime;
+            }
+
+            function rewind() {
+                audio.currentTime = 0;
+                progressFilled.style.width = '0%';
+                if (audio.paused) {
+                    playBtn.innerHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                    `;
+                }
+            }
+
+            function formatTime(seconds) {
+                const minutes = Math.floor(seconds / 60);
+                seconds = Math.floor(seconds % 60);
+                return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            }
+
+            // Event listeners for audio player
+            playBtn.addEventListener('click', togglePlay);
+            rewindBtn.addEventListener('click', rewind);
+            audio.addEventListener('timeupdate', updateProgress);
+
+            // Click on progress bar
+            let mousedown = false;
+            progress.addEventListener('click', scrub);
+            progress.addEventListener('mousemove', (e) => mousedown && scrub(e));
+            progress.addEventListener('mousedown', () => mousedown = true);
+            progress.addEventListener('mouseup', () => mousedown = false);
+
+            // Set duration once metadata is loaded
+            audio.addEventListener('loadedmetadata', function() {
+                durationEl.textContent = formatTime(audio.duration);
+            });
+
+            // Scroll animations
+            const scrollElements = document.querySelectorAll('[data-scroll]');
+
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8
+                );
+            }
+
+            function handleScrollAnimation() {
+                scrollElements.forEach((el) => {
+                    if (isElementInViewport(el)) {
+                        el.classList.add('visible');
+                    }
+                });
+            }
+
+            // Initial check and scroll listener
+            handleScrollAnimation();
+            window.addEventListener('scroll', handleScrollAnimation);
+
+            // Parallax effect on scroll
+            const parallaxElements = document.querySelectorAll('.parallax-scroll');
+
+            function parallax() {
+                const scrollTop = window.pageYOffset;
+
+                parallaxElements.forEach(element => {
+                    const speed = element.dataset.speed || 0.15;
+                    element.style.transform = `translateY(${scrollTop * speed}px)`;
+                });
+            }
+
+            window.addEventListener('scroll', parallax);
+
+            // Smooth scroll for navigation
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Gallery animation on scroll
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            function isElementPartiallyInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.bottom > 0
+                );
+            }
+
+            function handleGalleryItemsAnimation() {
+                galleryItems.forEach((item) => {
+                    if (isElementPartiallyInViewport(item)) {
+                        item.style.transform = 'translateY(0)';
+                        item.style.opacity = '1';
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', handleGalleryItemsAnimation);
+            handleGalleryItemsAnimation(); // Initial check
+        });
+    </script>
+</body>
+</html>
